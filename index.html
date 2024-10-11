@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciclagem Naval</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/108acab114.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <header class="header-container">
+        <div class="title">
+            <h1>Reciclagem Naval</h1>
+            <strong>Jogadas restantes: <span id="remaning-plays">12</span></strong>
+        </div>        
+
+        <div class="points">
+            <strong>Pontos: <span id="points">00</span></strong>
+            <span class="flash-msg hide" id="flash-msg">+00</span>
+        </div>
+    </header>   
+
+    <strong class="hide" id="game-end"></strong>
+    <strong class="final-points-msg hide" id="final-points-msg"></strong>
+
+    <button class="reload-btn hide" id="reload-btn">
+        <i class="fa-solid fa-repeat"></i>
+    </button>
+
+    <div class="cards-container" id="cards-container"></div>
+
+    <div class="pontuation-container">
+        <h2>Pontuação</h2>
+
+        <div class="description-container">
+            <p>Limpe os mares e proteja a vida marinha, jogada por jogada!</p>
+        </div> 
+
+        <div class="pontuation-cards-container">
+            <div class="pontuation-card">
+                <img src="img/trash-01.png" alt="Lixo 01">
+                <strong>50 pontos</strong>
+            </div>
+
+            <div class="pontuation-card">
+                <img src="img/trash-02.png" alt="Lixo 02">
+                <strong>100 pontos</strong>
+            </div>
+
+            <div class="pontuation-card">
+                <img src="img/trash-03.png" alt="Lixo 01">
+                <strong>150 pontos</strong>
+            </div>
+        </div>
+    </div>
+
+    <!--JAVASCRIPT-->
+    <script src="script.js"></script>
+</body>
+</html>
