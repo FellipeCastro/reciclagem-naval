@@ -50,7 +50,7 @@ body {
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 10px;
     width: 100%;
     max-width: 620px;
@@ -168,4 +168,93 @@ body {
 .hide {
     opacity: 0;
     pointer-events: none;
+}
+
+/* Para dispositivos menores (ex: tablets e smartphones em paisagem) */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .title h1 {
+        font-size: 2em;
+    }
+
+    .points {
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .cards-container {
+        gap: 8px;
+    }
+
+    .card {
+        width: 40px;
+        height: 40px;
+    }
+
+    .pontuation-container h2 {
+        font-size: 1.8em;
+    }
+
+    .pontuation-card img {
+        height: 60px;
+    }
+}
+
+/* Para dispositivos muito pequenos (ex: smartphones) */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .header-container {
+        gap: 10px;
+    }
+
+    .title h1 {
+        font-size: 1.8em;
+    }
+
+    .points {
+        gap: 0.5em;
+    }
+
+    .cards-container {
+        gap: 6px;
+    }
+
+    .card {
+        width: 35px;
+        height: 35px;
+    }
+
+    .pontuation-container {
+        padding: 15px 0;
+    }
+
+    .pontuation-container h2 {
+        font-size: 1.5em;
+    }
+
+    .description-container p {
+        font-size: 0.9em;
+    }
+
+    .pontuation-card img {
+        height: 50px;
+    }
+
+    .reload-btn {
+        font-size: 1.2em;
+        top: 0.8em;
+        right: 0.8em;
+    }
 }
